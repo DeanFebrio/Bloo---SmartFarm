@@ -3,11 +3,7 @@ package com.example.bloo.repository
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.bloo.model.AutomaticModel
-import com.example.bloo.model.SensorModel
 import com.google.firebase.database.*
-
-import java.text.SimpleDateFormat
-import java.util.*
 
 class AutomaticRepository {
     private val databaseAutomatic: DatabaseReference = FirebaseDatabase.getInstance().getReference("Automatic")
