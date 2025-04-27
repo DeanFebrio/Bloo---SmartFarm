@@ -16,7 +16,7 @@ class SensorViewModel : ViewModel() {
         addSource(sensorData) {
             sensorList ->
             value = when {
-                (sensorList.firstOrNull()?.AirTemperature ?: 0) > 30 -> "Bad"
+                (sensorList.firstOrNull()?.AirTemperature ?: 0) > 35.0 -> "Bad"
                 else -> "Good"
             }
         }
@@ -26,8 +26,8 @@ class SensorViewModel : ViewModel() {
         addSource(sensorData) {
             sensorList ->
             value = when {
-                (sensorList.firstOrNull()?.Precipitation ?: 0) == 1 -> "Good"
-                else -> "Bad"
+                (sensorList.firstOrNull()?.Precipitation ?: 0) == 1 -> "Close"
+                else -> "Open"
             }
         }
     }
@@ -36,7 +36,7 @@ class SensorViewModel : ViewModel() {
         addSource(sensorData) {
             sensorList ->
             value = when {
-                (sensorList.firstOrNull()?.SoilMoisture ?: 0) < 70.0 -> "Bad"
+                (sensorList.firstOrNull()?.SoilMoisture ?: 0) < 30.0 -> "Bad"
                 else -> "Good"
             }
         }
@@ -46,7 +46,7 @@ class SensorViewModel : ViewModel() {
         addSource(sensorData) {
                 sensorList ->
             value = when {
-                (sensorList.firstOrNull()?.Humidity ?: 0) < 70.0 -> "Bad"
+                (sensorList.firstOrNull()?.Humidity ?: 0) < 50.0 -> "Bad"
                 else -> "Good"
             }
         }
