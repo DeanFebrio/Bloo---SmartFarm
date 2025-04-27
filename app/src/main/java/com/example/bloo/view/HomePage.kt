@@ -39,22 +39,26 @@ class HomePage : AppCompatActivity() {
         }
 
         val precipitationStatus = findViewById<TextView>(R.id.PrecipitationStatus)
-        sensorViewModel.precipitationStatus.observe(this) {
-                status ->
+        sensorViewModel.precipitationStatus.observe(this) { status ->
             precipitationStatus.text = status
             if (status == "Bad") {
                 precipitationStatus.setBackgroundResource(R.drawable.rounded_red_bg)
                 precipitationStatus.setTextColor(ContextCompat.getColor(this, R.color.cream3))
+            } else {
+                precipitationStatus.setBackgroundResource(R.drawable.rounded_cream2_bg)
+                precipitationStatus.setTextColor(ContextCompat.getColor(this, R.color.blue1))
             }
         }
 
         val temperatureStatus = findViewById<TextView>(R.id.TemperatureStatus)
-        sensorViewModel.temperatureStatus.observe(this) {
-            status ->
+        sensorViewModel.temperatureStatus.observe(this) { status ->
             temperatureStatus.text = status
             if (status == "Bad") {
                 temperatureStatus.setBackgroundResource(R.drawable.rounded_red_bg)
                 temperatureStatus.setTextColor(ContextCompat.getColor(this, R.color.cream3))
+            } else {
+                temperatureStatus.setBackgroundResource(R.drawable.rounded_cream2_bg)
+                temperatureStatus.setTextColor(ContextCompat.getColor(this, R.color.green1))
             }
         }
 
@@ -65,6 +69,9 @@ class HomePage : AppCompatActivity() {
             if (status == "Bad") {
                 soilMoistureStatus.setBackgroundResource(R.drawable.rounded_red_bg)
                 soilMoistureStatus.setTextColor(ContextCompat.getColor(this, R.color.cream3))
+            } else {
+                soilMoistureStatus.setBackgroundResource(R.drawable.rounded_green1_bg)
+                soilMoistureStatus.setTextColor(ContextCompat.getColor(this, R.color.cream2))
             }
         }
 
@@ -75,6 +82,9 @@ class HomePage : AppCompatActivity() {
             if (status == "Bad") {
                 humidityStatus.setBackgroundResource(R.drawable.rounded_red_bg)
                 humidityStatus.setTextColor(ContextCompat.getColor(this, R.color.cream3))
+            } else {
+                humidityStatus.setBackgroundResource(R.drawable.rounded_cream2_bg)
+                humidityStatus.setTextColor(ContextCompat.getColor(this, R.color.green2))
             }
         }
 
