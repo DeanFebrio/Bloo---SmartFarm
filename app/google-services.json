@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "175469841807",
+    "firebase_url": "https://iot-project--smartfarm-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "iot-project--smartfarm",
+    "storage_bucket": "iot-project--smartfarm.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175469841807:android:a81f1d58876ddfa532cffa",
+        "android_client_info": {
+          "package_name": "com.example.bloo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvqso7-t5pa4vUI4Kon8VnJXw5f5h5wms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

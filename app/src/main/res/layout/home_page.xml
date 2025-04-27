@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream2"
+    android:padding="16dp"
+    >
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome"
+                android:fontFamily="@font/baloo"
+                android:textSize="24sp"
+                android:textColor="@color/blue1"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/bloo_icon"
+            android:padding="10dp"
+            android:background="@drawable/icon_bloo_bg"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <!-- Grid Layout for Cards -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:padding="8dp">
+
+        <!-- Card Precipitation -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/blue1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="30dp"
+                        android:src="@drawable/rain"
+                        android:padding="0dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/PrecipitationStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Good"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/baloo"
+                        android:textColor="@color/blue1"
+                        android:background="@drawable/rounded_cream2_bg"
+                        android:gravity="center"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/Precipitation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="80%"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/baloo"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Precipitation"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/baloo2"
+                    android:textColor="@android:color/white"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card Air Temperature -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/green1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="30dp"
+                        android:src="@drawable/temperature"
+                        android:padding="0dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/TemperatureStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Good"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/baloo"
+                        android:textColor="@color/green1"
+                        android:background="@drawable/rounded_cream2_bg"
+                        android:gravity="center"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/AirTemperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24c"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/baloo"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Air Temperature"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/baloo2"
+                    android:textColor="@android:color/white"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card Soil Moisture -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/green4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="30dp"
+                        android:src="@drawable/soil"
+                        android:padding="0dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/SoilMoistureStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Good"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/baloo"
+                        android:textColor="@color/cream2"
+                        android:background="@drawable/rounded_green1_bg"
+                        android:gravity="center"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/SoilMoisture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="80%"
+                    android:textSize="24sp"
+                    android:textColor="@color/green1"
+                    android:fontFamily="@font/baloo"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Soil Moisture"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/baloo2"
+                    android:textColor="@color/green1"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card Humidity -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/green2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="30dp"
+                        android:src="@drawable/humidity"
+                        android:padding="0dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/HumidityStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Good"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/baloo"
+                        android:textColor="@color/green2"
+                        android:background="@drawable/rounded_cream2_bg"
+                        android:gravity="center"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/Humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70%"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/baloo"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Humidity"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/baloo2"
+                    android:textColor="@android:color/white"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Manage Plant System"
+        android:textSize="28sp"
+        android:fontFamily="@font/baloo"
+        android:textColor="@color/green1"
+        android:layout_marginTop="14dp"
+        />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="1"
+        android:padding="8dp">
+
+        <!-- Card automatic roof -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/blue1"
+                android:gravity="center_horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Automatic Roof"
+                    android:textColor="@color/cream2"
+                    android:fontFamily="@font/baloo"
+                    android:textSize="20sp"
+                    />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/OnOffAutoButtonRoof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:selectionRequired="true">
+                    <Button
+                        android:id="@+id/btnONRoof"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ON"
+                        android:textColor="@color/blue1"
+                        android:fontFamily="@font/baloo"
+                        android:backgroundTint="@color/cream2"
+                        />
+                    <Button
+                        android:id="@+id/btnOFFRoof"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OFF"
+                        android:textColor="@color/blue1"
+                        android:fontFamily="@font/baloo"
+                        android:backgroundTint="@color/cream2"
+                        />
+                    <Button
+                        android:id="@+id/btnAUTORoof"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AUTO"
+                        android:textColor="@color/blue1"
+                        android:fontFamily="@font/baloo"
+                        android:backgroundTint="@color/cream2"
+                        />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card Automatic Pump -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/green1"
+                android:gravity="center_horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Automatic Pump"
+                    android:textColor="@color/cream2"
+                    android:fontFamily="@font/baloo"
+                    android:textSize="20sp"
+                    />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/OnOffAutoButtonPump"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:selectionRequired="true">
+                    <Button
+                        android:id="@+id/btnONPump"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ON"
+                        android:textColor="@color/green1"
+                        android:fontFamily="@font/baloo"
+                        android:backgroundTint="@color/cream2"
+                        />
+                    <Button
+                        android:id="@+id/btnOFFPump"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OFF"
+                        android:textColor="@color/green1"
+                        android:fontFamily="@font/baloo"
+                        android:backgroundTint="@color/cream2"
+                        />
+                    <Button
+                        android:id="@+id/btnAUTOPump"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AUTO"
+                        android:textColor="@color/green1"
+                        android:fontFamily="@font/baloo"
+                        android:backgroundTint="@color/cream2"
+                        />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+</LinearLayout>
