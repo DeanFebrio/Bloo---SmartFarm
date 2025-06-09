@@ -32,16 +32,17 @@ class HomePage : AppCompatActivity() {
         sensorViewModel.sensorData.observe(this) { sensorList ->
             sensorList.firstOrNull()?.let { sensor ->
                 precipitationView.text = sensor.precipitationText
-                airTemperatureView.text = "${sensor.AirTemperature ?: 0}°C"
-                soilMoistureView.text = "${sensor.SoilMoisture ?: 0}%"
-                humidityView.text = "${sensor.Humidity ?: 0}%"
+                airTemperatureView.text = String.format("%.1f°C", sensor.AirTemperature ?: 0f)
+                soilMoistureView.text = String.format("%.1f%%", sensor.SoilMoisture ?: 0f)
+                humidityView.text = String.format("%.1f%%", sensor.Humidity ?: 0f)
             }
         }
+
 
         val precipitationStatus = findViewById<TextView>(R.id.PrecipitationStatus)
         sensorViewModel.precipitationStatus.observe(this) { status ->
             precipitationStatus.text = status
-            if (status == "Bad") {
+            if (status == "Open") {
                 precipitationStatus.setBackgroundResource(R.drawable.rounded_red_bg)
                 precipitationStatus.setTextColor(ContextCompat.getColor(this, R.color.cream3))
             } else {
